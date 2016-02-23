@@ -5,12 +5,18 @@ import zipfile
 import tarfile
 from os import system
 
-
-NAME = sys.argv[1]
+try:
+    NAME = sys.argv[1]
+except:
+    NAME = raw_input("What is your name?\n")
+    
 RESPONSES = [
     "That really sucks, {}".format(NAME),
     "Who do you want me to destroy?",
     "You are the light of my life, " + NAME,
+    "Hey we've all been there!",
+    "It'll be ok. Tomorrow is a new day.",
+    "Turn that frown upside down!",
 ]#need to add more responses
 
 def main():
